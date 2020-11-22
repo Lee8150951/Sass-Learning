@@ -1,0 +1,61 @@
+.rounded {
+  border-radius: 5px;
+}
+
+.col-1 {
+  width: 25%;
+}
+
+.col-2 {
+  width: 50%;
+}
+
+.col-3 {
+  width: 75%;
+}
+
+.col-4 {
+  width: 100%;
+}
+
+.icon-succes {
+  background-image: url(../image/icons/succes.jpg);
+}
+
+.icon-error {
+  background-image: url(../image/icons/error.jpg);
+}
+
+.icon-warning {
+  background-image: url(../image/icons/warning.jpg);
+}
+
+.i-6 {
+  width: 30px;
+}
+
+.i-5 {
+  width: 25px;
+}
+
+.i-4 {
+  width: 20px;
+}
+
+.i-3 {
+  width: 15px;
+}
+
+.i-2 {
+  width: 10px;
+}
+
+.i-1 {
+  width: 5px;
+}
+
+body {
+  background-color: #000;
+}
+
+/*# sourceMappingURL=style.css.map */

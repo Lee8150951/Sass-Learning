@@ -1,0 +1,13 @@
+.alert, .alert-info {
+  padding: 15px;
+}
+
+.alert a, .alert-info a {
+  font-weight: bold;
+}
+
+.alert-info {
+  background-color: darkgray;
+}
+
+/*# sourceMappingURL=style.css.map */

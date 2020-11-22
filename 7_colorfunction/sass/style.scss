@@ -1,0 +1,58 @@
+body {
+    background-color: rgb(255, 255, 0);
+}
+div {
+    // 如果想要有透明的效果，可以使用rgba函数
+    // 第四个数字表示透明度，0表示完全透明，1表示完全不透明
+    background-color: rgba(255, 255, 0, 0.8);
+}
+span {
+    // HSL表示色相、饱和度、明度
+    background-color: hsl(0, 100%, 50%);
+}
+ul {
+    // 同div透明度a
+    background-color: hsla(0, 100%, 50%, 0.5);
+}
+
+$base-color: #ff0000;
+$base-color-hsl: hsl(0, 100, 50%);
+html {
+    // 使用adjust-hue调整色相
+    background-color: adjust-hue($base-color-hsl, 137deg);
+}
+
+// 使用lighten调整亮度
+$light-color: lighten($base-color, 30%);
+// 使用darken调整暗度
+$dark-color: darken($base-color, 30%);
+.alert {
+    background-color: $light-color;
+    background-color: $dark-color;
+}
+
+// 使用saturate增加颜色的饱和度（纯度）
+// 以50%为基准点，加（减）第二个参数
+$saturate-color: saturate($base-color, 90%);
+// 使用desaturate降低颜色饱和度（纯度）
+$desaturate-color: desaturate($base-color, 30%);
+.bar_1 {
+    background-color: $saturate-color;
+}
+.bar_2 {
+    background-color: $desaturate-color;
+}
+
+// 使用opacify控制颜色的透明度
+// 以0.5为基准点，加（减）第二个参数
+// 1代表完全不透明
+// 0代表完全透明
+// opacify增加不透明度
+$opacify-color: opacify($base-color, 0.3);
+$transopacify-color: transopacify($base-color, 0.3);
+.nav_1 {
+    background-color: $opacify-color;
+}
+.nav_2 {
+    background-color: $transopacify_color;
+}

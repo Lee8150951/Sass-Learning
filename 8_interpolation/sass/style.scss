@@ -1,0 +1,9 @@
+// 使用#{}可以添加（拼接）字符串
+$version: '0.0.1';
+/* 当前项目版本是#{$version} */
+
+$name: 'info';
+$attr: 'border';
+.#{$attr}-#{$name} {
+    background-color: #fff;
+}

@@ -1,0 +1,51 @@
+// 使用@if判断条件
+$use-prefixes: false;
+// $use-prefixes: true;
+.rounded {
+    @if $use-prefixes {
+        -o-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -webkit-border-radius: 5px;
+    }
+    border-radius: 5px;
+}
+
+// 使用@for循环
+// @for $var from <开始值> to(through) <结束值> {}
+// to不包含结束值
+// through包含结束值
+$columns: 4;
+@for $i from 1 through $columns {
+    .col-#{$i} {
+        width: 100% / $columns * $i;
+    }
+}
+
+// @each可以根据列表项目生成特定项目
+$icons: succes error warning;
+@each $icon in $icons {
+    .icon-#{$icon} {
+        background-image: url(../image/icons/#{$icon}.jpg);
+    }
+}
+
+// @while可以在某个条件为真时一直执行,知道不符合条件
+$m: 6;
+@while $m > 0 {
+    .i-#{$m} {
+        width: 5px * $m;
+    }
+    $m: $m - 1;
+}
+
+// 函数
+$colors: (light: #fff, dark: #000);
+
+@function color($key) {
+    @return map-get($colors, $key);
+}
+
+body {
+    background-color: color(dark);
+}

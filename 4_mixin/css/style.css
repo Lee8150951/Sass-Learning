@@ -1,0 +1,17 @@
+.alert-warning {
+  color: aqua;
+  background-color: #fff;
+}
+.alert-warning a {
+  color: #000;
+}
+
+.test-txt {
+  color: pink;
+  background-color: blue;
+}
+.test-txt a {
+  color: #ff8da1;
+}
+
+/*# sourceMappingURL=style.css.map */

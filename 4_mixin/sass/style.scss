@@ -1,0 +1,28 @@
+// @mixin 指令允许我们定义一个可以在整个样式表中重复使用的样式。
+// @include 指令可以将混入（mixin）引入到文档中。
+
+@mixin alert {
+    color: aqua;
+    background-color: #fff;
+    a {
+        color: #000;
+    }
+}
+
+.alert-warning {
+    @include alert();
+}
+
+// 在@mixin中添加参数可以使使用起来更加便捷灵活
+@mixin test($text-color, $background) {
+    color: $text-color;
+    background-color: $background;
+    a {
+        // darken方法，加深颜色
+        color: darken($text-color, 10%);
+    }
+}
+
+.test-txt {
+    @include test(pink, blue);
+}

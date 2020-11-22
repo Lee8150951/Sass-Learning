@@ -1,0 +1,15 @@
+// 变量可以是颜色，可以是数值，也可以是多个值
+$primary-color: #1269b5;
+$primary-border: 1px solid #1269b5;
+// 变量之间可以嵌套使用
+$primary-background: $primary-color;
+
+div.box {
+    background-color: $primary-color;
+}
+h1.page-header {
+    border: $primary-border;
+}
+div.header {
+    background-color: $primary-background;
+}

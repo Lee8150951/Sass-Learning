@@ -1,0 +1,12 @@
+.alert {
+    padding: 15px;
+}
+.alert a {
+    font-weight: bold;
+}
+.alert-info {
+    // @extend可以用来继承其他相同的样式
+    // 在后面可以加上自己特殊的样式
+    @extend .alert;
+    background-color: darkgray;
+}

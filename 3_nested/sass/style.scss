@@ -1,0 +1,67 @@
+.nav {
+    height: 30px;
+}
+.nav ul {
+    margin: 0;
+}
+.nav ul li {
+    float: left;
+    list-style: none;
+    padding: 5px;
+}
+
+// 以上可以写为以下形式
+.nav {
+    height: 30px;
+    ul {
+        margin: 0;
+        li {
+            float: left;
+            list-style: none;
+            padding: 5px;
+        }
+    }
+}
+
+// 父选择器的使用
+div {
+    height: 300px;
+    .box {
+        width: 300px;
+        a {
+            display: block;
+            // 此处加&的作用是为了直接与a相连，成为a的直接伪类
+            &:hover {
+                color: aqua;
+            }
+        }
+    }
+}
+
+// 属性的嵌套
+.nav {
+    border: 1px solid #000;
+    border-left: 0;
+    border-right: 0;
+}
+// 以上可以改造为
+.nav {
+    border: 1px solid #000{
+        left: 0;
+        right: 0;
+    }
+}
+// 还有一种情况
+body {
+    font-size: large;
+    font-weight: 100;
+    font-family: Arial, Helvetica, sans-serif;
+}
+// 可改造为
+body {
+    font: {
+        family: Arial, Helvetica, sans-serif;
+        weight: 100;
+        size: large;
+    }
+}

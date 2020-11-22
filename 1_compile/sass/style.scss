@@ -1,0 +1,14 @@
+body{
+    font-size: 15px;
+    color: blue;
+    height: 200px;
+}
+// 自动编译scss文件
+// 在对应根目录中命令行输入指令：sass --watch sass:[输出文件夹位置]
+// 如：sass --watch sass:css
+
+// 另外，输出的css有四种格式，对应了不同的输出指令
+// 1、nested嵌套（默认输出格式）：sass [源文件]:[输出文件]
+// 2、compact紧凑：sass [源文件]:[输出文件] --style compact
+// 3、expanded拓展：sass [源文件]:[输出文件] --style expanded
+// 4、compressed压缩：sass [源文件]:[输出文件] --style compressed

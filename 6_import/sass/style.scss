@@ -1,0 +1,15 @@
+// 注意此处不需要写文件的下划线和拓展名
+// 只需要输入文件的主体部分即可
+@import "./base";
+
+@mixin alert {
+    color: aqua;
+    background-color: #fff;
+    a {
+        color: #000;
+    }
+}
+
+.alert-warning {
+    @include alert();
+}
